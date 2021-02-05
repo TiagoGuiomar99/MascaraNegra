@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.svg">
+    <link href="http://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <title>Máscara Negra | Como Ajudar</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="Máscara Negra Logo"></a></div>
+            <div class="nav-text">
+                <ul>
+                    <li><a href="suggestion.html">DICAS</a></li>
+                    <li class="active"><a href="help.html">COMO AJUDAR</a></li>
+                    <li><a href="about.html">SOBRE</a></li>
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="banner-help">
+    <img src="img/fotocapaFinal.jpg" alt="">
+    </section>
+
+    <section class="mask-donation">
+        <div class="mask">
+            <div id="mask-img"> 
+                <img src="img/mask.png" alt="" class="center">
+            </div>
+            <div class="mask-text">
+                <p id="title">Compra a nossa máscara.</p>
+                <p>A tua ajuda faz a diferença!<br> Compra a nossa máscara ou doa uma pequena quantia.</p>
+            </div>
+        </div>
+
+        <div class="donation">
+            <div class="don-cont">
+                <form action="donation.html" >
+                    <p id="do-don">Faça o seu donativo</p>
+                    <div class="amount required-1" id="help-btn">
+                        <input type="button" id="valorbtn" name="amount" class="don-btn" value="2€" >
+                        <input type="button" id="valorbtn" name="amount" class="don-btn" value="5€">
+                        <input type="button" id="valorbtn" name="amount" class="don-btn" value="10€">
+                        <input type="button" id="valorbtn" name="amount" class="don-btn" value="20€">
+                    </div>
+                    <div id="amount-dif">
+                        <input  type="number" id="valor" placeholder="Inserir outro montante" name="amount" class="input-don">
+                        <p id="euro">€</p>
+                    </div>
+                    <p id="if-don">Se doares um valor igual ou superior a 5€, oferecemos-te uma máscara.</p>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="pay" id="pay" value="one-time"><label class="radio-label">Uma Vez</label>
+                    </label>
+                    <label class="radio-inline rad2 ">
+                        <input type="radio" name="pay" id="pay" value="monthly"><label class="radio-label required-1">Mensalmente</label>
+                    </label>
+                    <br>
+                    <div class="donation-select required">
+                        <select class="input-typ-don " required placeholder="" name="payment" id="payment">
+                            <option value="">Selecionar método de pagamento</option>
+                            <option value="MBWAY">MBWAY</option>
+                            <option value="MULTIBANCO">MULTIBANCO</option>
+                            <option value="PAYPAL">PAYPAL</option>
+                        </select>
+                    </div>
+                    <br>
+                    <input type="submit" class="submit-btn" value="Doar" onclick="payFunction()">
+                </form>
+            </div>
+        </div>
+    </section>
+<script>
+    function  payFunction(){
+var Valor = document.getElementById("valor").value;
+document.getElementById("valordon").innerHTML = (valor + "€");}
+</script>
+    
+    <footer>
+        <p id="footer-info">© Copyright 2020 Máscara Negra</p>
+        <div id="social">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/mascara.negra.94"><img src="img/facebook.svg" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/MscaraNegra7"><img src="img/twitter.svg" alt="twitter"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/mascaranegra/"><img src="img/instagram.svg" alt="instagram"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
